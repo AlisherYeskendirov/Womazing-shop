@@ -1,0 +1,79 @@
+.brand-section {
+   &__container {
+      padding-top: rem(200);
+      @include adaptiveValue("padding-top", 200, 100);
+   }
+
+   &__title {}
+
+   &__blog-content {}
+
+   &__shop-btn {
+      display: flex;
+      justify-content: center;
+      padding-top: rem(30);
+      padding-bottom: rem(130);
+      @include adaptiveValue("padding-top", 30, 5);
+      @include adaptiveValue("padding-bottom", 130, 80);
+   }
+
+   &__btn {
+      display: block;
+
+      &:hover {
+         background-color: #509498;
+         transition: all 0.5s ease 0s;
+      }
+   }
+}
+
+.blog-content {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: rem(95);
+   row-gap: rem(30);
+   margin-bottom: rem(100);
+
+   @media (max-width:$mobile) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 70%;
+   }
+
+   @media (max-width:$mobileSmall) {
+      grid-template-columns: 90%;
+   }
+
+
+   &__image-ibg {
+      padding-bottom: percent(547, 442);
+
+      @media (max-width:$mobile) {
+         order: 2;
+      }
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: rem(542);
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+
+      @media (max-width:$mobile) {
+         order: 1;
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(40);
+         }
+      }
+   }
+
+   &__title {
+      margin-bottom: rem(46);
+   }
+}
