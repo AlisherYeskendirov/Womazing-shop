@@ -1,0 +1,107 @@
+.shop-section {
+   &__container {
+      padding-top: rem(200);
+      @include adaptiveValue("padding-top", 200, 100);
+   }
+
+   &__title {}
+}
+
+//========================================================================================================================================================
+
+.tabs__content {
+   padding-top: rem(50);
+   border: 0;
+}
+
+.tabs__navigation {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   column-gap: rem(10);
+   row-gap: rem(30);
+
+   @media (max-width:$mobile) {
+      display: block;
+   }
+}
+
+.tabs__title {
+   padding: 10%;
+   border: 1px solid #000;
+   font-weight: 500;
+   font-size: rem(17);
+   line-height: 140%;
+   letter-spacing: 0.02em;
+   @include adaptiveValue("font-size", 17, 15);
+
+   @media (max-width:$mobile) {
+      padding: rem(13) rem(20);
+      width: 100%;
+
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+
+   @media (max-width:$mobileSmall) {
+      padding: rem(8) rem(20);
+   }
+
+   &:hover {
+      background-color: #000;
+      color: #fff;
+      transition: all 0.5s ease 0s;
+   }
+
+   &._tab-active {
+      background-color: #000;
+      color: #fff;
+   }
+}
+
+.products-value {
+
+   &__top {
+      display: inline-block;
+      padding-top: rem(80);
+   }
+
+   &__bottom {
+      display: inline-block;
+      padding-bottom: rem(80);
+   }
+}
+
+//========================================================================================================================================================
+
+.pagging {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: rem(130);
+
+   &__arrow {
+      align-self: center;
+   }
+
+   &__list {
+      display: flex;
+      gap: rem(15);
+      margin-right: rem(15);
+   }
+
+   &__item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 41px;
+      height: 41px;
+      border: 1px solid #000;
+
+      &:hover {
+         background-color: #000;
+         color: #fff;
+         transition: all 0.5s ease 0s;
+      }
+   }
+}
